@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://blcgro5isyku7"]
+
+[ext_resource type="Texture2D" uid="uid://bmsds0xogrp83" path="res://Weapons/weaponR1.png" id="1_302pd"]
+[ext_resource type="Script" path="res://oru/ak_47.gd" id="1_c4b7b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ndaad"]
+size = Vector2(22, 10)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cig2l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_302pd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="ak-47" type="Area2D"]
+script = ExtResource("1_c4b7b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, 3)
+shape = SubResource("RectangleShape2D_ndaad")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(4, 3)
+scale = Vector2(0.0225529, 0.0158465)
+sprite_frames = SubResource("SpriteFrames_cig2l")
+offset = Vector2(-8, -434)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
