@@ -15,6 +15,11 @@ run/main_scene="res://menu.tscn"
 config/features=PackedStringArray("4.2", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameSettings="*res://GameSettings.gd"
+SaveData="*res://save_data.tscn"
+
 [dotnet]
 
 project/assembly_name="mafia"

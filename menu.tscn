@@ -1,51 +1,162 @@
-[gd_scene load_steps=3 format=3 uid="uid://dv0731ui2iwon"]
+[gd_scene load_steps=18 format=3 uid="uid://dv0731ui2iwon"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_btov7"]
-[ext_resource type="PackedScene" uid="uid://j11cydk500ay" path="res://bg.tscn" id="2_kg2y6"]
+[ext_resource type="Texture2D" uid="uid://bfk5iv0jihw68" path="res://1/ChatGPT Image 19 дек. 2025 г., 15_57_28(1).png" id="2_sqlse"]
+[ext_resource type="Texture2D" uid="uid://boybop7b6ci0k" path="res://1/free-icon-settings-945147(1).png" id="4_52bhi"]
+[ext_resource type="Texture2D" uid="uid://tawrcetw06vu" path="res://1/free-icon-exit-7995448(1).png" id="5_r5aq0"]
+[ext_resource type="Texture2D" uid="uid://d2yvwtmt7ilb8" path="res://1/Вставленное_изображение-removebg-preview.png" id="6_6a56k"]
+[ext_resource type="Texture2D" uid="uid://d1gyfcmthnxgj" path="res://1/roll_4(1)(2)(2).png" id="7_c17ho"]
+[ext_resource type="Texture2D" uid="uid://caqk70onj7yj3" path="res://1/free-icon-shopping-cart-834628.png" id="7_qn4sd"]
+[ext_resource type="Texture2D" uid="uid://3sst4wkxex5a" path="res://Full body animated characters/Char 1/with hands/50/idle_0.png" id="8_4f25c"]
+[ext_resource type="Texture2D" uid="uid://b7fvndwttjnd6" path="res://Full body animated characters/Char 1/with hands/50/idle_1.png" id="9_p3qlm"]
+[ext_resource type="Texture2D" uid="uid://b5oiiei4218cv" path="res://Full body animated characters/Char 1/with hands/50/idle_2.png" id="10_s46br"]
+[ext_resource type="Texture2D" uid="uid://cl5ei15k1vadd" path="res://Full body animated characters/Char 1/with hands/50/idle_3.png" id="11_bp37w"]
+[ext_resource type="Texture2D" uid="uid://4sv3cv0uklps" path="res://Full body animated characters/Char 1/with hands/50/idle_4.png" id="12_tb33l"]
+[ext_resource type="Texture2D" uid="uid://138i1q5cxruo" path="res://Full body animated characters/Char 1/with hands/50/idle_5.png" id="13_6f4aq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yhe8o"]
+bg_color = Color(1, 1, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y52xp"]
+bg_color = Color(1, 1, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lfy37"]
+bg_color = Color(0.341259, 0.611208, 0.927321, 1)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jwqbl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_4f25c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_p3qlm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_s46br")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_bp37w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_tb33l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_6f4aq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_btov7")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1157.0
+offset_bottom = 650.0
+texture = ExtResource("2_sqlse")
+
 [node name="Start" type="Button" parent="."]
-offset_left = 834.0
-offset_top = 710.0
-offset_right = 1009.0
-offset_bottom = 778.0
-theme_override_font_sizes/font_size = 40
-text = "strat
+offset_left = 798.0
+offset_top = 545.0
+offset_right = 1148.0
+offset_bottom = 645.0
+theme_override_colors/font_color = Color(0.352571, 3.3481e-06, 1.73271e-06, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_yhe8o")
+text = "В БОЙ 
 "
 metadata/_edit_use_anchors_ = true
 
 [node name="Setting" type="Button" parent="."]
-offset_left = 834.0
-offset_top = 790.0
-offset_right = 1009.0
-offset_bottom = 858.0
+offset_left = 1012.0
+offset_top = -2.0
+offset_right = 1074.0
+offset_bottom = 61.0
 theme_override_font_sizes/font_size = 40
-text = "Setting
+text = "
 "
+icon = ExtResource("4_52bhi")
+flat = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Exit" type="Button" parent="."]
-offset_left = 834.0
-offset_top = 871.0
-offset_right = 1009.0
-offset_bottom = 939.0
+offset_left = 1083.0
+offset_top = 2.0
+offset_right = 1143.0
+offset_bottom = 62.0
 theme_override_font_sizes/font_size = 40
-text = "Exit
+icon = ExtResource("5_r5aq0")
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="NameGame" type="Label" parent="."]
+offset_left = 238.0
+offset_top = 8.0
+offset_right = 866.0
+offset_bottom = 145.0
+theme_override_colors/font_color = Color(0.461862, 8.00174e-07, 1.44392e-07, 1)
+theme_override_font_sizes/font_size = 100
+text = "Mini Warfare
 "
 metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="."]
-offset_left = 673.0
-offset_top = 13.0
-offset_right = 1190.0
-offset_bottom = 273.0
-theme_override_font_sizes/font_size = 190
-text = "Mafia"
-metadata/_edit_use_anchors_ = true
+[node name="Node2D" type="Node2D" parent="."]
 
-[node name="BG" parent="." instance=ExtResource("2_kg2y6")]
+[node name="Sprite2D" type="Sprite2D" parent="Node2D"]
+position = Vector2(979, 28)
+scale = Vector2(0.103304, 0.0913258)
+texture = ExtResource("6_6a56k")
+
+[node name="Label" type="Label" parent="Node2D"]
+offset_left = 897.0
+offset_top = 15.0
+offset_right = 959.0
+offset_bottom = 42.0
+text = "999999"
+
+[node name="shop" type="Button" parent="."]
+offset_left = 6.0
+offset_top = 253.0
+offset_right = 122.0
+offset_bottom = 349.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_y52xp")
+text = "магазин"
+icon = ExtResource("7_qn4sd")
+icon_alignment = 1
+vertical_icon_alignment = 0
+
+[node name="Button" type="Button" parent="."]
+offset_left = 9.0
+offset_top = 353.0
+offset_right = 122.0
+offset_bottom = 454.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_lfy37")
+text = "персонаж"
+icon = ExtResource("7_c17ho")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(581, 254)
+scale = Vector2(0.228882, 0.205933)
+sprite_frames = SubResource("SpriteFrames_jwqbl")
+autoplay = "default"
+frame_progress = 0.0855694
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(578, 329)
+limit_left = 0
+limit_top = 0
+limit_right = 1154
+limit_bottom = 650
+limit_smoothed = true
 
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Setting" to="." method="_on_setting_pressed"]
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="shop" to="." method="_on_shop_pressed"]

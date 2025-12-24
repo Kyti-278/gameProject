@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://t564v7aly0d7"]
+
+[ext_resource type="Texture2D" uid="uid://ds72efiun2iii" path="res://Free Industrial Zone Tileset(1)/3 Objects/Box1.png" id="1_7focj"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_lxj8e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_80k2x"]
+size = Vector2(28, 22)
+
+[node name="Box" type="RigidBody2D"]
+position = Vector2(574, 371)
+collision_layer = 2
+mass = 1000.0
+physics_material_override = SubResource("PhysicsMaterial_lxj8e")
+freeze_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 4)
+shape = SubResource("RectangleShape2D_80k2x")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2, -1)
+texture = ExtResource("1_7focj")

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bonxtxpxpqmyk"]
+
+[ext_resource type="Script" path="res://MobSpawner.gd" id="1_tw5q0"]
+[ext_resource type="PackedScene" uid="uid://bwsbsq2mxv4f" path="res://characters/mobs/zomdie.tscn" id="2_lw6qx"]
+
+[node name="MobSpawner" type="Node2D"]
+position = Vector2(-4.76837e-07, 0)
+scale = Vector2(1, 0.982217)
+script = ExtResource("1_tw5q0")
+mob_scene = ExtResource("2_lw6qx")
+min_spawn_time = 3.0
+max_spawn_time = 8.0
+max_mobs = 2
