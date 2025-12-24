@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://di24ojqlvx11m"]
+
+[ext_resource type="Script" path="res://characters/CHARACTERISTIC/health_bar_ui.gd" id="1_254xo"]
+[ext_resource type="Texture2D" uid="uid://dg61px8hduvo6" path="res://1/health_bar/health_bar_decoration.png" id="1_seoch"]
+[ext_resource type="Texture2D" uid="uid://blhdi7bssto1e" path="res://1/health_bar/health_bar.png" id="2_bxpis"]
+
+[node name="HealthBarUI" type="CanvasLayer"]
+script = ExtResource("1_254xo")
+
+[node name="HealthBarDecoration" type="Sprite2D" parent="."]
+position = Vector2(200.25, 48)
+scale = Vector2(6.19531, 4)
+texture = ExtResource("1_seoch")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="hp" type="TextureProgressBar" parent="Control" groups=["health_ui"]]
+layout_mode = 1
+offset_left = 88.4999
+offset_top = 15.0
+offset_right = 392.5
+offset_bottom = 81.0
+value = 100.0
+nine_patch_stretch = true
+texture_progress = ExtResource("2_bxpis")
+
+[node name="CoinLabel" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 5.49992
+offset_top = 92.0
+offset_right = 396.5
+offset_bottom = 160.0
+theme_override_font_sizes/font_size = 45
+metadata/_edit_use_anchors_ = true

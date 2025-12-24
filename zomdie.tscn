@@ -1,7 +1,7 @@
 [gd_scene load_steps=36 format=3 uid="uid://bwsbsq2mxv4f"]
 
-[ext_resource type="Script" path="res://zomdie.gd" id="1_0vpap"]
 [ext_resource type="Texture2D" uid="uid://bw0f7qkdlx8pd" path="res://Full body animated characters/Enemies/Enemy 2/death_0.png" id="1_skkch"]
+[ext_resource type="Script" path="res://characters/mobs/zomdie.gd" id="1_ywwki"]
 [ext_resource type="Texture2D" uid="uid://cadftf2hvykao" path="res://Full body animated characters/Enemies/Enemy 2/death_1.png" id="2_v1kuc"]
 [ext_resource type="Texture2D" uid="uid://de406btbgp1pb" path="res://Full body animated characters/Enemies/Enemy 2/death_2.png" id="3_i0ewv"]
 [ext_resource type="Texture2D" uid="uid://m8maamcq8ht4" path="res://Full body animated characters/Enemies/Enemy 2/death_3.png" id="4_wg0c0"]
@@ -159,7 +159,8 @@ radius = 149.084
 size = Vector2(25, 32)
 
 [node name="Zomdie" type="CharacterBody2D"]
-script = ExtResource("1_0vpap")
+position = Vector2(546, 310)
+script = ExtResource("1_ywwki")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_re7dk")
@@ -170,12 +171,12 @@ scale = Vector2(0.0547485, 0.0479126)
 sprite_frames = SubResource("SpriteFrames_oedl4")
 animation = &"Idle"
 autoplay = "Idle"
-frame_progress = 0.546235
 offset = Vector2(18.2653, -396.555)
 
 [node name="Detector" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Detector"]
+position = Vector2(-1, 1)
 shape = SubResource("CircleShape2D_l85ld")
 
 [node name="damag" type="Area2D" parent="Detector"]
